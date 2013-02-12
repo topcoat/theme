@@ -7,13 +7,26 @@
   "dependencies": {},
   "development": {},
   "license": "Apache",
+  "files": [
+    "style/topcoat-button.styl",
+    "style/topcoat-dark-variables.styl",
+    "style/topcoat-light-variables.styl",
+    "style/topcoat-global.styl",
+    "style/topcoat-light-theme.styl",
+    "platform/android-props.styl",
+    "platform/ios-props.styl",
+    "platform/moz-props.styl",
+    "platform/webkit-props.styl",
+    "platform/windows-props.styl",
+    "static/topcoat.css",
+    "static/syntax.css",
+    "templates/archive.html",
+    "templates/layout.html",
+    "templates/page.html",
+    "templates/post.html"
+    ],
   "scripts": [
     "theme.js",
-    "static/*.css",
-    "static/*.js",
-    "templates/*.html"
-  ],
-  "styles": [
-    "style/*"
+    "static/topcoat.js"
   ]
 }
