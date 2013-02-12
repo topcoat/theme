@@ -1,0 +1,21 @@
+{
+  "name": "topcoat-theme",
+  "version": "0.0.0",
+  "description": "Default theme for TopCoat components",
+  "main": "theme.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/theme.git"
+  },
+  "keywords": [
+    "theme",
+    "topcoat",
+    "css",
+    "adobe"
+  ],
+  "author": "@dam Kristofer Joseph",
+  "license": "Apache"
+}
