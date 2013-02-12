@@ -9,8 +9,9 @@
   "license": "Apache",
   "scripts": [
     "theme.js",
-    "static/*",
-    "templates/*"
+    "static/*.css",
+    "static/*.js",
+    "templates/*.html"
   ],
   "styles": [
     "style/*"
