@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        // TODO: Add git pull of skins defined in package.json topcoat.skins
         // Task configuration.
         jshint: {
             options: {
