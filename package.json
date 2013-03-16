@@ -2,13 +2,18 @@
   "name": "topcoat-theme",
   "version": "0.0.0",
   "description": "Default theme for TopCoat components",
-  "main": "theme.js",
+  "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/topcoat/theme.git"
+  },
+  "topcoat": {
+    "skins": {
+      "topcoat/button-skin": ""
+    }
   },
   "keywords": [
     "theme",
@@ -17,5 +22,9 @@
     "adobe"
   ],
   "author": "@dam Kristofer Joseph",
-  "license": "Apache"
+  "license": "Apache",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-shell": "~0.2.1"
+  }
 }
