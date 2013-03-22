@@ -1,0 +1,150 @@
+@import button-mixins
+
+/*
+  Buttons
+*/
+
+// 1.0 TopCoat Button
+//
+//
+// :active - Active state
+// .is-active - Simulates an active state on mobile devices
+//
+// Examples:
+//
+//    <a class="topcoat-button {{modifier}}">Button</a>
+
+.topcoat-button {
+    button-base()
+    padding: var-padding;
+    margin: var-margin;
+    font-size: var-font-size;
+    line-height: var-line-height;
+    letter-spacing: var-letter-spacing;
+    color: var-color;
+    text-shadow: var-text-shadow;
+    vertical-align: var-vertical-align;
+    background-color: var-background-color;
+    box-shadow: var-box-shadow;
+    border: var-border;
+    border-radius: var-border-radius;
+}
+
+.topcoat-button:active,
+.topcoat-button.is-pressed {
+    background-color: var-background-color-down;
+    box-shadow: var-box-shadow-down;
+}
+
+// 1.1 TopCoat Quiet Button
+//
+//
+// :active - Quiet button active state
+// .is-pressed - Simulates active state for a quiet button on touch interfaces
+//
+// Examples:
+//
+//    <a class="topcoat-button--quiet {{modifier}}">Button</a>
+
+.topcoat-button--quiet {
+    @extend .topcoat-button
+    button-base--quiet()
+}
+
+.topcoat-button--quiet:active,
+.topcoat-button--quiet.is-pressed {
+    color: var-color;
+    text-shadow: var-text-shadow;
+    background-color: var-background-color--down;
+    border: var-border;
+    box-shadow: var-box-shadow--down;
+}
+
+// 1.1 TopCoat Large Button
+//
+//
+// :active - Large button active state
+// .is-pressed - Simulates active state for large button on touch interfaces
+//
+// Examples:
+//
+//    <a class="topcoat-button--large {{modifier}}" >Button</a>
+
+.topcoat-button--large {
+    @extend .topcoat-button
+    font-size: var-font-size;
+    line-height: var-line-height;
+}
+
+// 1.2 TopCoat Large Quiet Button
+//
+//
+// :active - Large quiet button active state
+// .is-pressed - Simulates active state for large quiet button on touch interfaces
+//
+// Examples:
+//
+//    <a class="topcoat-button--large--quiet {{modifier}}" >Button</a>
+
+.topcoat-button--large--quiet {
+    @extend .topcoat-button--large
+    @extend .topcoat-button--quiet
+}
+
+// 1.3 TopCoat Call To Action Button
+//
+//
+// :active - Call To Action button active state
+// .is-pressed - Simulates active state for call to action button on touch interfaces
+//
+// Examples:
+//
+//    <a class="topcoat-button--cta {{modifier}}" >Button</a>
+
+.topcoat-button--cta {
+    @extend .topcoat-button
+    border: var-border--cta;
+    background-color: var-background-color--cta;
+    box-shadow: var-box-shadow--cta;
+    color: var-color--cta;
+    font-weight: var-font-weight--cta;
+    text-shadow: var-text-shadow--cta;
+}
+
+.topcoat-button--cta:active,
+.topcoat-button--cta.is_pressed {
+    background-color: var-background-color--cta--down;
+    box-shadow: var-box-shadow--cta--down;
+}
+
+// 1.4 TopCoat Quiet Call To Action Button
+//
+//
+// :active - Quiet Call To Action button active state
+// .is-pressed - Simulates active state for quiet call to action button on touch interfaces
+//
+// Examples:
+//
+//    <a class="topcoat-button--quiet--cta {{modifier}}" >Button</a>
+
+.topcoat-button--quiet--cta {
+    @extend .topcoat-button--quiet
+    @extend .topcoat-button--cta
+}
+
+// 1.5 TopCoat Large Quiet Call To Action Button
+//
+//
+// :active - Large Quiet Call To Action button active state
+// .is-pressed - Simulates active state for large quiet call to action button on touch interfaces
+//
+// Examples:
+//
+//    <a class="topcoat-button--large--quiet--cta {{modifier}}" >Button</a>
+
+.topcoat-button--large--quiet--cta {
+    @extend .topcoat-button--large
+    @extend .topcoat-button--quiet
+    @extend .topcoat-button--cta
+}
+
