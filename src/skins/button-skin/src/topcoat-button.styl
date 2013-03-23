@@ -2,18 +2,24 @@
 
 /*
   Buttons
+  =======
 */
 
 /*
-// 1.0 TopCoat Button
-//
-//
-// :active - Active state
-// .is-active - Simulates an active state on mobile devices
-//
-// Examples:
-//
-//    <a class="topcoat-button {{modifier}}">Button</a>
+ TopCoat Button
+ --------------
+
+ :active - Active state
+
+ .is-active - Simulates an active state on mobile devices
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+    <a class="topcoat-button">Button</a>
+    <a class="topcoat-button is-active">Button</a>
+    <a class="topcoat-button is-disabled">Button</a>
 */
 
 .topcoat-button {
@@ -33,30 +39,40 @@
 }
 
 .topcoat-button:active,
-.topcoat-button.is-pressed {
+.topcoat-button.is-active {
     background-color: var-background-color--down;
     box-shadow: var-box-shadow--down;
 }
 
+.topcoat-button:disabled,
+.topcoat-button.is-disabled {
+    disabled()
+}
+
 /*
-// 1.1 TopCoat Quiet Button
-//
-//
-// :active - Quiet button active state
-// .is-pressed - Simulates active state for a quiet button on touch interfaces
-//
-// Examples:
-//
-//    <a class="topcoat-button--quiet {{modifier}}">Button</a>
+ TopCoat Quiet Button
+ -------------------
+
+ :active - Quiet button active state
+
+ .is-active - Simulates active state for a quiet button on touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+    <a class="topcoat-button--quiet">Button</a>
+    <a class="topcoat-button--quiet is-active">Button</a>
+    <a class="topcoat-button--quiet is-disabled">Button</a>
 */
 
 .topcoat-button--quiet {
-    @extend .topcoat-button
+    button-base()
     button-base--quiet()
 }
 
 .topcoat-button--quiet:active,
-.topcoat-button--quiet.is-pressed {
+.topcoat-button--quiet.is-active {
     color: var-color;
     text-shadow: var-text-shadow;
     background-color: var-background-color--down;
@@ -64,16 +80,26 @@
     box-shadow: var-box-shadow--down;
 }
 
+.topcoat-button--quiet:disabled,
+.topcoat-button--quiet.is-disabled {
+   disabled()
+}
+
 /*
-// 1.1 TopCoat Large Button
-//
-//
-// :active - Large button active state
-// .is-pressed - Simulates active state for large button on touch interfaces
-//
-// Examples:
-//
-//    <a class="topcoat-button--large {{modifier}}" >Button</a>
+ TopCoat Large Button
+ --------------------
+
+ :active - Active state
+
+ .is-active - Simulates active state touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+    <a class="topcoat-button--large" >Button</a>
+    <a class="topcoat-button--large is-active" >Button</a>
+    <a class="topcoat-button--large is-disabled" >Button</a>
 */
 
 .topcoat-button--large {
@@ -83,15 +109,21 @@
 }
 
 /*
-// 1.2 TopCoat Large Quiet Button
-//
-//
-// :active - Large quiet button active state
-// .is-pressed - Simulates active state for large quiet button on touch interfaces
-//
-// Examples:
-//
-//    <a class="topcoat-button--large--quiet {{modifier}}" >Button</a>
+ 1.2 TopCoat Large Quiet Button
+ -----------------------------
+
+ :active - Active state
+
+ .is-pressed - Simulates active state on touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+
+    <a class="topcoat-button--large--quiet" >Button</a>
+    <a class="topcoat-button--large--quiet is-active" >Button</a>
+    <a class="topcoat-button--large--quiet is-disabled" >Button</a>
 */
 
 .topcoat-button--large--quiet {
@@ -100,15 +132,22 @@
 }
 
 /*
-// 1.3 TopCoat Call To Action Button
-//
-//
-// :active - Call To Action button active state
-// .is-pressed - Simulates active state for call to action button on touch interfaces
-//
-// Examples:
-//
-//    <a class="topcoat-button--cta {{modifier}}" >Button</a>
+ 1.3 TopCoat Call To Action Button
+ -----------------------------
+
+ :active - Active state
+
+ .is-pressed - Simulates active state on touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+
+    <a class="topcoat-button--cta" >Button</a>
+    <a class="topcoat-button--cta is-active" >Button</a>
+    <a class="topcoat-button--cta is-disabled" >Button</a>
+
 */
 
 .topcoat-button--cta {
@@ -122,38 +161,50 @@
 }
 
 .topcoat-button--cta:active,
-.topcoat-button--cta.is_pressed {
+.topcoat-button--cta.is_active {
     background-color: var-background-color--cta--down;
     box-shadow: var-box-shadow--cta--down;
 }
 
 /*
-// 1.4 TopCoat Quiet Call To Action Button
-//
-//
-// :active - Quiet Call To Action button active state
-// .is-pressed - Simulates active state for quiet call to action button on touch interfaces
-//
-// Examples:
-//
-//    <a class="topcoat-button--quiet--cta {{modifier}}" >Button</a>
+ 1.4 TopCoat Quiet Call To Action Button
+ ---------------------------------------
+
+ :active - Active state
+
+ .is-pressed - Simulates active state on touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+
+    <a class="topcoat-button--quiet--cta" >Button</a>
+    <a class="topcoat-button--quiet--cta is-active" >Button</a>
+    <a class="topcoat-button--quiet--cta is-disabled" >Button</a>
 */
 
 .topcoat-button--quiet--cta {
-    @extend .topcoat-button--quiet
     @extend .topcoat-button--cta
+    @extend .topcoat-button--quiet
 }
 
 /*
-// 1.5 TopCoat Large Quiet Call To Action Button
-//
-//
-// :active - Large Quiet Call To Action button active state
-// .is-pressed - Simulates active state for large quiet call to action button on touch interfaces
-//
-// Examples:
-//
-//    <a class="topcoat-button--large--quiet--cta {{modifier}}" >Button</a>
+ 1.5 TopCoat Large Quiet Call To Action Button
+ -----------------------------
+
+ :active - Active state
+
+ .is-pressed - Simulates active state on touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+
+    <a class="topcoat-button--large--quiet--cta" >Button</a>
+    <a class="topcoat-button--large--quiet--cta is-active" >Button</a>
+    <a class="topcoat-button--large--quiet--cta is-disabled" >Button</a>
 */
 
 .topcoat-button--large--quiet--cta {
