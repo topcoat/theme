@@ -210,8 +210,7 @@
 */
 
 .topcoat-button--quiet--cta {
-    @extend .topcoat-button--cta
-    button-base--quiet()
+    @extend .topcoat-button--quiet
 }
 
 .topcoat-button--quiet--cta:active,
@@ -225,7 +224,7 @@
 }
 
 /*
- TopCoat Large Call TO Action Button
+ TopCoat Large Call To Action Button
  --------------------
 
  :active - Active state
@@ -276,6 +275,7 @@
 */
 
 .topcoat-button--large--quiet--cta {
+    @extend .topcaot-button--quiet--cta
     @extend .topcoat-button--large--cta
     button-base--quiet()
 }
