@@ -20,14 +20,16 @@ module.exports = function(grunt) {
         },
         gruntfile: {
             src: 'Gruntfile.js'
-        }
+        },
+        clean : ['src/skins/*.zip']
     });
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-topcoat');
     grunt.loadNpmTasks('grunt-zip');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     // Default task.
-    grunt.registerTask('default', ['topcoat', 'unzip']);
+    grunt.registerTask('default', ['topcoat', 'unzip', 'clean']);
 
 };
