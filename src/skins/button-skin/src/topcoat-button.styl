@@ -138,7 +138,7 @@
 
 .topcoat-button--large--quiet {
     @extend .topcoat-button--large
-    @extend .topcoat-button--quiet
+    button-base--quiet()
 }
 
 .topcoat-button--large--quiet:active,
@@ -212,7 +212,7 @@
 
 .topcoat-button--quiet--cta {
     @extend .topcoat-button--cta
-    @extend .topcoat-button--quiet
+    button-base--quiet()
 }
 
 .topcoat-button--quiet--cta:active,
@@ -222,6 +222,39 @@
 
 .topcoat-button--quiet--cta:disabled,
 .topcoat-button--quiet--cta.is-disabled {
+    disabled()
+}
+
+/*
+ TopCoat Large Call TO Action Button
+ --------------------
+
+ :active - Active state
+
+ .is-active - Simulates active state touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+    <a class="topcoat-button--large--cta" >Button</a>
+    <a class="topcoat-button--large--cta is-active" >Button</a>
+    <a class="topcoat-button--large--cta is-disabled" >Button</a>
+*/
+
+.topcoat-button--large--cta {
+    @extend .topcoat-button--cta
+    font-size: var-font-size--large;
+    line-height: var-line-height--large;
+}
+
+.topcoat-button--large:active,
+.topcoat-button--large.is-active {
+    @extend .topcoat-button--cta:active
+}
+
+.topcoat-button--large-cta:disabled,
+.topcoat-button--large--cta.is-disabled {
     disabled()
 }
 
@@ -244,9 +277,8 @@
 */
 
 .topcoat-button--large--quiet--cta {
-    @extend .topcoat-button--large
-    @extend .topcoat-button--quiet
-    @extend .topcoat-button--cta
+    @extend .topcoat-button--large--cta
+    button-base--quiet()
 }
 
 .topcoat-button--large--quiet--cta:active,
