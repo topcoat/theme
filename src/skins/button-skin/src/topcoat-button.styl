@@ -82,7 +82,7 @@
 
 .topcoat-button--quiet:disabled,
 .topcoat-button--quiet.is-disabled {
-   disabled()
+    disabled()
 }
 
 /*
@@ -108,6 +108,16 @@
     line-height: var-line-height--large;
 }
 
+.topcoat-button--large:active,
+.topcoat-button--large.is-active {
+    @extend .topcoat-button:active
+}
+
+.topcoat-button--large:disabled,
+.topcoat-button--large.is-disabled {
+    disabled()
+}
+
 /*
  TopCoat Large Quiet Button
  --------------------------
@@ -129,6 +139,16 @@
 .topcoat-button--large--quiet {
     @extend .topcoat-button--large
     @extend .topcoat-button--quiet
+}
+
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet.is-active {
+    @extend .topcoat-button--quiet:active
+}
+
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--large--quiet.is-disabled {
+    disabled()
 }
 
 /*
@@ -161,9 +181,15 @@
 }
 
 .topcoat-button--cta:active,
-.topcoat-button--cta.is_active {
+.topcoat-button--cta.is-active {
+    @extend .topcoat-button:active
     background-color: var-background-color--cta--down;
     box-shadow: var-box-shadow--cta--down;
+}
+
+.topcoat-button--cta:disabled,
+.topcoat-button--cta.is-disabled {
+    disabled()
 }
 
 /*
@@ -189,6 +215,16 @@
     @extend .topcoat-button--quiet
 }
 
+.topcoat-button--quiet--cta:active,
+.topcoat-button--quiet--cta.is-active {
+    @extend .topcoat-button--cta:active
+}
+
+.topcoat-button--quiet--cta:disabled,
+.topcoat-button--quiet--cta.is-disabled {
+    disabled()
+}
+
 /*
  TopCoat Large Quiet Call To Action Button
  -----------------------------------------
@@ -211,4 +247,14 @@
     @extend .topcoat-button--large
     @extend .topcoat-button--quiet
     @extend .topcoat-button--cta
+}
+
+.topcoat-button--large--quiet--cta:active,
+.topcoat-button--large--quiet--cta.is-active {
+    @extend .topcoat-button--cta:active
+}
+
+.topcoat-button--large--quiet--cta:disabled,
+.topcoat-button--large--quiet--cta.is-disabled {
+    disabled()
 }
