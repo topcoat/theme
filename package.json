@@ -1,6 +1,6 @@
 {
   "name": "topcoat-theme",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Default theme for TopCoat components",
   "main": "Gruntfile.js",
   "scripts": {
@@ -9,11 +9,6 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/topcoat/theme.git"
-  },
-  "topcoat": {
-    "skins": {
-      "topcoat/button": ""
-    }
   },
   "keywords": [
     "theme",
