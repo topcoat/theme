@@ -1,7 +1,7 @@
 {
   "name": "topcoat-theme",
   "version": "0.4.0",
-  "description": "Default theme for TopCoat components",
+  "description": "Default theme for Topcoat components",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test"
@@ -17,10 +17,5 @@
     "adobe"
   ],
   "author": "@dam Kristofer Joseph",
-  "license": "Apache",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-topcoat": "0.0.2",
-    "grunt-zip": "~0.5.0"
-  }
+  "license": "Apache"
 }
