@@ -1,6 +1,6 @@
 {
   "name": "topcoat-theme",
-  "version": "0.5.14",
+  "version": "0.5.15",
   "description": "Default theme for Topcoat components",
   "main": "Gruntfile.js",
   "repository": {
