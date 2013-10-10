@@ -2,18 +2,18 @@
 
 /* ---------- darken ---------- */
 var-dark    = 5
-var-darker  = 10
+var-darker  = 8
 var-darkest = 15
 
 /* ---------- lighten ---------- */
-var-light    = 6
+var-light    = 3
 var-lighter  = 9
 var-lightest = 24
 
 /* ---------- alphas ---------- */
-var-alpha--high = 0.5
+var-alpha--high = 0.1
 var-alpha--med  = 0.23
-var-alpha--low  = 0.1
+var-alpha--low  = 0.05
 
 /* ---------- colors ---------- */
 var-color            = #c6c8c8
@@ -41,7 +41,7 @@ var-border-color = darken(var-background-color, var-darkest)
 var-menu-stack-icon = url("../img/hamburger_light.svg")
 
 /* Navigation Bar */
-var-color--navigation-bar = var-color
+var-color--navigation-bar = var-highlight-color
 var-box-shadow--navigation-bar = inset 0 -1px var-border-color, 0 var-border-thickness darken(var-background-color, var-darker)
 
 /* Text Input */
@@ -51,17 +51,17 @@ var-background-color--text-input = var-background-color--input
 var-background-color--text-input--focus = var-background-color--text-input
 
 /* List */
-var-background-color--list = var-background-color
+var-background-color--list = darken(var-background-color, var-darker)
 var-border-top--list-container = var-border
 var-border-top--list = var-border
-var-border-bottom--list = var-border-thickness solid var-highlight-color
-var-border-top--list-item--first = var-border-thickness solid darken(var-background-color, var-darker)
+var-border-bottom--list = var-border-thickness solid lighten(var-background-color, var-light)
+var-border-top--list-item--first = var-border-thickness solid rgba(var-shadow-color, var-alpha--low)
 var-border-top--list-item = var-border-bottom--list
 var-border-bottom--list-item = var-border
 var-color--list-header = var-color
 var-text-shadow--list-header = 0 var-border-thickness 0 rgba(var-highlight-color, var-alpha--high)
 var-border-top--list-header = var-border-thickness solid rgba(var-highlight-color, var-alpha--high)
-var-border-bottom--list-header = var-border-thickness solid rgba(var-highlight-color, var-alpha--med)
+var-border-bottom--list-header = var-border-thickness solid rgba(var-highlight-color, var-alpha--low)
 var-background-color--list-header = var-background-color--down
 
 /* Overlay */
