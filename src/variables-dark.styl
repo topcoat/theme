@@ -1,64 +1,99 @@
 /* This file should include color and image variables corresponding to the dark theme */
+
+/* ---------- darken ---------- */
+var-dark    = 5
+var-darker  = 8
+var-darkest = 15
+
+/* ---------- lighten ---------- */
+var-light    = 3
+var-lighter  = 9
+var-lightest = 24
+
+/* ---------- alphas ---------- */
+var-alpha--high = 0.1
+var-alpha--med  = 0.23
+var-alpha--low  = 0.05
+
+/* ---------- colors ---------- */
+var-color            = #c6c8c8
 var-background-color = #595b5b
 var-background--body = #4B4D4E
-var-background-color--down = #404141
-var-background-color--hover = #646666
-var-border = 1px solid #303233
-var-box-shadow = inset 0 1px #727373
-var-box-shadow--down = inset 0 1px rgba(0, 0, 0, 0.18)
-var-color = #c6c8c8
-var-text-shadow =  0 -1px rgba(0, 0, 0, 0.69)
-/* Call To Action */
-var-background-color--cta--down = #1976c3
-var-background-color--cta--hover = #509BEF
+var-highlight-color  = #fff
+var-shadow-color     = #000
+
+/* ---------- thickness ---------- */
+var-border-thickness = 1px
+
+/* ---------- shadows ---------- */
+var-shadow-emboss = 0 -1px rgba( 0, 0, 0, 0.69 )
+
+var-background-color--down = darken(var-background--body, var-dark)
+var-background-color--hover = lighten(var-background--body, var-lighter)
+var-border = var-border-thickness solid var-border-color
+var-box-shadow = inset 0 var-border-thickness darken(var-highlight-color, 55)
+var-box-shadow--down = inset 0 var-border-thickness rgba(var-shadow-color, var-alpha--low)
+var-text-shadow = var-shadow-emboss
+var-background-color--input = darken(var-background-color, var-darker)
+var-border-color = darken(var-background-color, var-darkest)
+
 /* Icons */
-var-menu-stack-icon = url("../img/hamburger_light.svg");
-var-search-icon = url("../img/search.svg")
+var-menu-stack-icon = url("../img/hamburger_light.svg")
+
 /* Navigation Bar */
-var-color--navigation-bar = #fff
-var-box-shadow--navigation-bar = inset 0 -1px #333434, 0 1px rgba(0,0,0,0.15);
+var-color--navigation-bar = var-highlight-color
+var-box-shadow--navigation-bar = inset 0 -1px var-border-color, 0 var-border-thickness darken(var-background-color, var-darker)
+
 /* Text Input */
-var-color--placeholder = #C6C8C8
-var-color--focus = #fff
-var-background-color--text-input = var-background-color--down
-var-background-color--text-input--focus = var-background-color--hover
-/* Search Input */
-var-background-image--search-input = var-search-icon
-// See if we still need this variable
-var-background-color--input = #424546
+var-color--placeholder = lighten(var-color, var-lightest)
+var-color--focus = var-color
+var-background-color--text-input = var-background-color--input
+var-background-color--text-input--focus = var-background-color--text-input
+
 /* List */
-var-background-color--list = rgb(68, 72, 73)
-var-border-top--list-container = 1px solid rgb(47, 50, 52)
-var-border-top--list = 1px solid rgb(47, 50, 52)
-var-border-bottom--list = 1px solid rgb(94, 96, 97)
-var-border-top--list-item--first = 1px solid rgba(0, 0, 0, 0.05)
-var-border-top--list-item = 1px solid rgb(94, 96, 97)
-var-border-bottom--list-item = 1px solid rgb(47, 50, 52)
-var-color--list-header = rgb(134, 136, 136)
-var-text-shadow--list-header = 0 -1px 0 rgba(0, 0, 0, 0.3)
-var-border-top--list-header = solid 1px rgba(255, 255, 255, 0.1)
-var-border-bottom--list-header = solid 1px rgba(255, 255, 255, 0.05)
-var-background-color--list-header = rgb(59, 62, 64)
-/* Checkbox */
-var-checkbox-checked = url("../img/checkbox_checked_dark.png");
-var-checkbox-unchecked = url("../img/checkbox_unchecked_dark.png")
+var-background-color--list = darken(var-background-color, var-darker)
+var-border-top--list-container = var-border
+var-border-top--list = var-border
+var-border-bottom--list = var-border-thickness solid lighten(var-background-color, var-light)
+var-border-top--list-item--first = var-border-thickness solid rgba(var-shadow-color, var-alpha--low)
+var-border-top--list-item = var-border-bottom--list
+var-border-bottom--list-item = var-border
+var-color--list-header = var-color
+var-text-shadow--list-header = 0 var-border-thickness 0 rgba(var-highlight-color, var-alpha--high)
+var-border-top--list-header = var-border-thickness solid rgba(var-highlight-color, var-alpha--high)
+var-border-bottom--list-header = var-border-thickness solid rgba(var-highlight-color, var-alpha--low)
+var-background-color--list-header = var-background-color--down
+
 /* Overlay */
-var-modal-bg-color = #595b5b
-var-overlay__header-border = 1px solid rgba(0, 0, 0, 0.18)
+var-modal-bg-color = var-background-color
+var-overlay__header-border = var-border
+
 /* Progress bar */
-var-bar-bg-color = var-modal-bg-color
-var-progress-bg-color = #54c1ff
+var-bar-bg-color = var-background-color--down
+var-progress-bg-color = var-background-color
+
 /* Checkbox */
-var-border--checkmark = 7px solid #ffffff
+var-border--checkmark = 7px solid var-color
+
+/* Range input */
+var-range-background = var-background-color--down
+var-range__slider-border = var-border
+var-range__slider-background = var-background-color
+var-range__slider-bg-size = 7px 18px
+var-range__slider-box-shadow = inset 0 var-border-thickness 0 rgba(var-shadow-color, var-alpha--low);
+
 /* Radio Button */
-var-border--radio-button = 1px solid rgba(255,255,255,0.1)
-var-background--radio-button = #ffffff
-var-box-shadow--radio-button = 0 1px rgba(255,255,255,0.50)
+var-border--radio-button = var-border-thickness solid rgba(var-shadow-color, var-alpha--low)
+var-background--radio-button = var-color
+var-box-shadow--radio-button = 0 var-border-thickness rgba(var-highlight-color, var-alpha--high)
+
 /* Tab bar */
-var-color--tab-bar--active = #5dc1ff
-var-background-color--tab-bar--active = #404141
-var-box-shadow--tab-bar--active = inset 0 0 2px #313231
+var-color--tab-bar--active = var-background-color--cta
+var-background-color--tab-bar--active = var-background-color-light--cta
+var-box-shadow--tab-bar--active = inset 0 0 var-border-thickness rgba(var-shadow-color, var-alpha--low)
+
 /* Switch */
-var-color--switch__label--left = #5dc1ff
-var-background-color--switch__label--left = #404141
-var-background-color--switch__label--right = #404141
+var-color--switch__label--left = var-background-color--cta
+var-background-color--switch__label--left = var-background-color--down
+var-background-color--switch__label--right = var-background-color--down
+
