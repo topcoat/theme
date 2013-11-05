@@ -29,7 +29,7 @@
   var-padding--large: 0 0.875rem;
   var-height: 1.313rem;
   var-height--large: 1.688rem;
-  var-line-height: var(height;
+  var-line-height: var(height);
   var-line-height--large: var(height--large);
   var-vertical-align: top;
   /* Icon Button */

@@ -83,8 +83,8 @@
   var-border-bottom--list-item: var(border);
   var-color--list-header: var(color);
   var-text-shadow--list-header: 0 var(border-thickness) 0 rgba(var(highlight-color), var(alpha--high));
-  var-border-top--list-header: var(border-thickness solid rgba(var-highlight-color, var(alpha--high));
-  var-border-bottom--list-header: var(border-thickness solid rgba(var(highlight-color), var(alpha--med));
+  var-border-top--list-header: var(border-thickness) solid rgba(var-highlight-color, var(alpha--high));
+  var-border-bottom--list-header: var(border-thickness) solid rgba(var(highlight-color), var(alpha--med));
   var-background-color--list-header: var(background-color--down);
 
   /* Overlay */
